@@ -28,8 +28,8 @@ public class Main
 
       AddonManager manager = new AddonManagerImpl(furnace, new MavenAddonDependencyResolver());
 
-      AddonId projects = AddonId.from("org.jboss.forge.addon:projects", "2.0.0-SNAPSHOT");
-      AddonId maven = AddonId.from("org.jboss.forge.addon:maven", "2.0.0-SNAPSHOT");
+      AddonId projects = AddonId.from("org.jboss.forge.addon:projects", "3.0.0.Alpha3");
+      AddonId maven = AddonId.from("org.jboss.forge.addon:maven", "3.0.0.Alpha3");
 
       manager.install(projects).perform();
       manager.install(maven).perform();
@@ -42,6 +42,6 @@ public class Main
       Project project = factory.createTempProject();
 
       DependencyFacet dependencies = project.getFacet(DependencyFacet.class);
-      dependencies.addDirectDependency(DependencyBuilder.create("org.jboss.forge.furnace:furnace-se:2.0.0-SNAPSHOT"));
+      dependencies.addDirectDependency(DependencyBuilder.create("org.jboss.forge.furnace:furnace-se:2.22.9.Final"));
    }
 }
