@@ -28,8 +28,8 @@ public class Main
 
       AddonManager manager = new AddonManagerImpl(furnace, new MavenAddonDependencyResolver());
 
-      AddonId projects = AddonId.from("org.jboss.forge.addon:projects", "3.0.0.Alpha3");
-      AddonId maven = AddonId.from("org.jboss.forge.addon:maven", "3.0.0.Alpha3");
+      AddonId projects = AddonId.from("org.jboss.forge.addon:projects", "2.20.1.Final");
+      AddonId maven = AddonId.from("org.jboss.forge.addon:maven", "2.20.1.Final");
 
       manager.install(projects).perform();
       manager.install(maven).perform();
